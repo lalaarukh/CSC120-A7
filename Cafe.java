@@ -27,7 +27,7 @@ public class Cafe extends Building {
          System.out.println("We have" + nCoffeeOunces + "coffee ounces, " + nSugarPackets + "sugar packets, " + nCreams + "creams, and" + nCups + "cups remaining!");   
         } else {
             System.out.println("Sorry, we do not have the inventory to make your drink, let us restock");
-            Cafe.restock(20, 20, 20, 20);
+            restock(20, 20, 20, 20);
         }
     
     }
@@ -44,10 +44,7 @@ public class Cafe extends Building {
     }
 
     public void showOptions() {
-        System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + order coffee!");
-    }
-    public static void main(String[] args) {
-        new Cafe();
+        System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + restock()\n + order coffee!");
     }
     
 }

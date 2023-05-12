@@ -34,16 +34,21 @@ public class House extends Building {
   }
 
   public String moveOut(String name){
-     // return the name of the person who moved out
-      if (this.residents.contains(name)){
-        System.out.println(name);
-        this.residents.remove(name);
-      } else {
-        throw new RuntimeException(name + "has already moved out!");
-      }
+    // return the name of the person who moved out
+    if (this.residents.contains(name)){
+      System.out.println(name);
+      this.residents.remove(name);
+    } else {
+      throw new RuntimeException(name + " has already moved out!");
+    }
+    return this.name;
+  }
+
+    public void showOptions() {
+      System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + moveOut()\n + moveIn()\n + hasDiningRoom()\n + order live and have fun!");
     }
 
-    public boolean isResident(String person){
+  public boolean isResident(String person){
       /* tells us whether or not a given person is a resident of the `House` */
       if (this.residents.contains(person)){
         return true;
