@@ -82,8 +82,8 @@ public class Library extends Building {
       System.out.println(key + value);
     }
   }
-    public static void main(String[] args) {
-      new Library();
-    }
 
+  public void showOptions() {
+    System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + addTitle()\n + removeTitle\n + checkOut()\n + returnBook()\n + containsTitle()\n + isAvailable()\n + printCollection()\n + study and chill!");
   }
+}
